@@ -20,17 +20,42 @@
 //         summ += salaries[key];
 //     }
 // console.log(summ);
-function multiplyNumeric(menu){
-    for(let key in menu)
-    {
-         menu[key]=menu[key]*2;
-         console.log(menu);
-    }
+// function multiplyNumeric(menu){
+//     for(let key in menu)
+//     {
+//          menu[key]=menu[key]*2;
+//          console.log(menu);
+//     }
+// }
+// let menu = {
+// width: 200,
+// height: 300,
+// title: "My menu"
+// }
+// multiplyNumeric(menu);
+let spkmo={
+ras:[{
+name: 'ras077',
+students: 22
+},{
+name: 'ras067',
+students: 20
+}],
+isp:[{
+sites:[{
+name: 'isp079',
+students: 30
+},{
+name: 'isp089',
+students: 27
+}],
+pi:[{
+name: 'pi0089',
+students: 25
+}]
+}]
 }
-let menu = {
-width: 200,
-height: 300,
-title: "My menu"
-}
-multiplyNumeric(menu);
+
+let summ = spkmo.ras[0].students + spkmo.ras[1].students + spkmo.isp[0].sites[0].students + spkmo.isp[0].sites[1].students + spkmo.isp[0].pi[0].students;
+console.log(summ);
 </script>
