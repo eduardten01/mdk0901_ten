@@ -9,15 +9,28 @@
 // alert( isEmpty(schedule) ); // true
 //     schedule["8:30"] ="get up";
 // alert( isEmpty(schedule) ); // false
-summ=0;
-let salaries = {
-John: 100,
-Ann: 160,
-Pete: 130
-}
-for(let key in salaries)
+// summ=0;
+// let salaries = {
+// John: 100,
+// Ann: 160,
+// Pete: 130
+// }
+// for(let key in salaries)
+//     {
+//         summ += salaries[key];
+//     }
+// console.log(summ);
+function multiplyNumeric(menu){
+    for(let key in menu)
     {
-        summ += salaries[key];
+         menu[key]=menu[key]*2;
+         console.log(menu);
     }
-console.log(summ);
+}
+let menu = {
+width: 200,
+height: 300,
+title: "My menu"
+}
+multiplyNumeric(menu);
 </script>
