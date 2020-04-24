@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Document</title>
+</head>
+<body>
+     <ul>
+        <li>Один</li>
+        <li>Два</li>
+        <li>Три</li>
+        <li>Четыре</li>
+        </ul>
+        
+        <input type="text">
+        
+        <button >Добавить li</button>
+        <script>
+            //1
+        document.querySelector('button').addEventListener("click", function (){
+        
+        let specialli = document.querySelector('ul');
+        let newli = document.createElement('li')
+        newli .textContent = document.querySelector("input").value;
+        specialli.append(newli );
+       
+           });
+        </script>
