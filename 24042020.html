@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-     <ul>
+     <!-- <ul>
         <li>Один</li>
         <li>Два</li>
         <li>Три</li>
@@ -26,5 +26,16 @@
         newli .textContent = document.querySelector("input").value;
         specialli.append(newli );
        
+           }); -->
+           <script>
+           document.querySelector('.button-class').addEventListener("click", function (){
+            r = Math.floor(Math.random() * (256)),
+                g = Math.floor(Math.random() * (256)),
+                b = Math.floor(Math.random() * (256)),
+                color = '#' + r.toString(16) + g.toString(16) + b.toString(16);
+
+                document.querySelector('body').style.background = color;
            });
         </script>
+    </body>
+    </html>
