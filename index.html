@@ -73,4 +73,14 @@ olymp.push(i);
 }
 return olymp;
 }
+    //8
+    var getDayOfWeek = function(weekDay, number) {
+var weekDays = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
+
+for (var i = 0; i < 7; i++) {
+if (weekDay === weekDays[i]) {
+return(weekDays[(i + number - 1) % 7]);
+}
+}
+}
     </script>
