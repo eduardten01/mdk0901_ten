@@ -30,14 +30,26 @@
 // }
 // }
 //4
-const getDiet = (food, limit) => {
-var total = 0;
-for (var i = 0; i <= food.length; i++) {
-if (total > limit) {
-return i - 1;
+// const getDiet = (food, limit) => {
+// var total = 0;
+// for (var i = 0; i <= food.length; i++) {
+// if (total > limit) {
+// return i - 1;
+// }
+// total += food[i];
+// }
+// }
+//5
+    
+var getDocumentsNumbers = function (nameDoc, years) {
+var j = 0;
+for (var i = 0; i < nameDoc.length; i++) {
+var ye = nameDoc[i];
+var year = ye.indexOf(years, 4);
+if (year > -1) {
+j = j + 1;
 }
-total += food[i];
 }
+return j;
 }
-
     </script>
