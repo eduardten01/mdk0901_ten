@@ -53,12 +53,24 @@
 // return j;
 // }
     //6
-    var incomeTax = 13;
-var contributions = 30;
-var calculateExpenses = function (netSalary) {
-var dirtySalary = netSalary * (incomeTax/(100-incomeTax));//подсчет НДФЛ от грязной ЗП;
-dirtySalary += netSalary;//итого грязная ЗП;
-var costSalary = dirtySalary + (dirtySalary/100 * contributions);//грязная ЗП + общий размер взносов;
-return Math.round(costSalary);
+//     var incomeTax = 13;
+// var contributions = 30;
+// var calculateExpenses = function (netSalary) {
+// var dirtySalary = netSalary * (incomeTax/(100-incomeTax));//подсчет НДФЛ от грязной ЗП;
+// dirtySalary += netSalary;//итого грязная ЗП;
+// var costSalary = dirtySalary + (dirtySalary/100 * contributions);//грязная ЗП + общий размер взносов;
+// return Math.round(costSalary);
+// }
+//7
+    ar getYears = function (year, yearEnd, sumYear) {
+var olymp = [];
+for (i = year; i <= yearEnd; i++) {
+var yearStr = String(i);
+var sumYe = Number(yearStr[0]) + Number(yearStr[1]) + Number(yearStr[2]) + Number(yearStr[3]);
+if (sumYe === sumYear) {
+olymp.push(i);
+}
+}
+return olymp;
 }
     </script>
