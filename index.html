@@ -84,24 +84,36 @@
 // }
 // }
     //9
-    var calculateRoots = function (a, b, c) {
-var x1 = 0;
-var x2 = 0;
-var str;
-var D = b * b - 4 * a * c;
-if (D < 0) {
-str = 'Корней нет';
+//     var calculateRoots = function (a, b, c) {
+// var x1 = 0;
+// var x2 = 0;
+// var str;
+// var D = b * b - 4 * a * c;
+// if (D < 0) {
+// str = 'Корней нет';
+// }
+// if (D === 0) {
+// x1 = -b / (2 * a);
+// str = 'Корень равен ' + x1;
+// }
+// if (D > 0) {
+// x1 = (-b + Math.sqrt(D)) / (2 * a);
+// x2 = (-b - Math.sqrt(D)) / (2 * a);
+// str = 'Первый корень равен ' + x1 + ', второй корень равен ' + x2;
+// }
+// return str;
+// }
+//10
+    var calculateDeposit = function (dep, pr, per, isK) {
+if (!isK) {
+dep += pr / 12 / 100 * per * dep;
 }
-if (D === 0) {
-x1 = -b / (2 * a);
-str = 'Корень равен ' + x1;
+if (isK) {
+for (var i = 1; i <= per; i++) {
+dep += pr / 12 / 100 * dep;
 }
-if (D > 0) {
-x1 = (-b + Math.sqrt(D)) / (2 * a);
-x2 = (-b - Math.sqrt(D)) / (2 * a);
-str = 'Первый корень равен ' + x1 + ', второй корень равен ' + x2;
 }
-return str;
-}
+return Math.floor(dep);
+};
 
     </script>
