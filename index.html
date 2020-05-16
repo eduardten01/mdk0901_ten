@@ -115,5 +115,24 @@ dep += pr / 12 / 100 * dep;
 }
 return Math.floor(dep);
 };
-
+//11
+var calculateDeposit = function (startAmount, percent, depositTerm, isCapital) {
+if (isCapital) {
+for (var i=0; i<depositTerm; i++) {
+startAmount+=startAmount*percent/1200;
+}
+} else {
+startAmount+=startAmount*depositTerm*percent/1200
+}
+return Math.floor(startAmount)
+};
+var getProfitableDeposit = function (start, period, percentSimpl, percentCap) {
+var incomeSimpl=calculateDeposit(start,percentSimpl, period, false);
+var incomeCap=calculateDeposit(start,percentCap, period, true);
+if (incomeSimpl>incomeCap){
+return 'Выбирай обычный вклад. Заработаешь ' + incomeSimpl
+} else {
+return 'Выбирай капитализацию. Заработаешь ' + incomeCap
+}
+}
     </script>
