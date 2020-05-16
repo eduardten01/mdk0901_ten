@@ -15,18 +15,28 @@
 // return Math.round(ro*g*h);
 // }
     //3
-var calculate=function(firstNumber, secondNumber, operator) {
-if(operator==='+') {
-return parseInt(firstNumber,10)+parseInt(secondNumber,10);
+// var calculate=function(firstNumber, secondNumber, operator) {
+// if(operator==='+') {
+// return parseInt(firstNumber,10)+parseInt(secondNumber,10);
+// }
+// else if(operator==='-') {
+// return parseInt(firstNumber,10)-parseInt(secondNumber,10);
+// }
+// else if(operator==='*') {
+// return parseInt(firstNumber,10)*parseInt(secondNumber,10);
+// }
+// else if(operator==='/') {
+// return parseInt(firstNumber,10)/parseInt(secondNumber,10);
+// }
+// }
+//4
+const getDiet = (food, limit) => {
+var total = 0;
+for (var i = 0; i <= food.length; i++) {
+if (total > limit) {
+return i - 1;
 }
-else if(operator==='-') {
-return parseInt(firstNumber,10)-parseInt(secondNumber,10);
-}
-else if(operator==='*') {
-return parseInt(firstNumber,10)*parseInt(secondNumber,10);
-}
-else if(operator==='/') {
-return parseInt(firstNumber,10)/parseInt(secondNumber,10);
+total += food[i];
 }
 }
 
