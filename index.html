@@ -41,15 +41,24 @@
 // }
 //5
     
-var getDocumentsNumbers = function (nameDoc, years) {
-var j = 0;
-for (var i = 0; i < nameDoc.length; i++) {
-var ye = nameDoc[i];
-var year = ye.indexOf(years, 4);
-if (year > -1) {
-j = j + 1;
-}
-}
-return j;
+// var getDocumentsNumbers = function (nameDoc, years) {
+// var j = 0;
+// for (var i = 0; i < nameDoc.length; i++) {
+// var ye = nameDoc[i];
+// var year = ye.indexOf(years, 4);
+// if (year > -1) {
+// j = j + 1;
+// }
+// }
+// return j;
+// }
+    //6
+    var incomeTax = 13;
+var contributions = 30;
+var calculateExpenses = function (netSalary) {
+var dirtySalary = netSalary * (incomeTax/(100-incomeTax));//подсчет НДФЛ от грязной ЗП;
+dirtySalary += netSalary;//итого грязная ЗП;
+var costSalary = dirtySalary + (dirtySalary/100 * contributions);//грязная ЗП + общий размер взносов;
+return Math.round(costSalary);
 }
     </script>
