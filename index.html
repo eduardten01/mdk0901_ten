@@ -62,25 +62,46 @@
 // return Math.round(costSalary);
 // }
 //7
-    ar getYears = function (year, yearEnd, sumYear) {
-var olymp = [];
-for (i = year; i <= yearEnd; i++) {
-var yearStr = String(i);
-var sumYe = Number(yearStr[0]) + Number(yearStr[1]) + Number(yearStr[2]) + Number(yearStr[3]);
-if (sumYe === sumYear) {
-olymp.push(i);
-}
-}
-return olymp;
-}
+//     var getYears = function (year, yearEnd, sumYear) {
+// var olymp = [];
+// for (i = year; i <= yearEnd; i++) {
+// var yearStr = String(i);
+// var sumYe = Number(yearStr[0]) + Number(yearStr[1]) + Number(yearStr[2]) + Number(yearStr[3]);
+// if (sumYe === sumYear) {
+// olymp.push(i);
+// }
+// }
+// return olymp;
+// }
     //8
-    var getDayOfWeek = function(weekDay, number) {
-var weekDays = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
+//     var getDayOfWeek = function(weekDay, number) {
+// var weekDays = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
 
-for (var i = 0; i < 7; i++) {
-if (weekDay === weekDays[i]) {
-return(weekDays[(i + number - 1) % 7]);
+// for (var i = 0; i < 7; i++) {
+// if (weekDay === weekDays[i]) {
+// return(weekDays[(i + number - 1) % 7]);
+// }
+// }
+// }
+    //9
+    var calculateRoots = function (a, b, c) {
+var x1 = 0;
+var x2 = 0;
+var str;
+var D = b * b - 4 * a * c;
+if (D < 0) {
+str = 'Корней нет';
 }
+if (D === 0) {
+x1 = -b / (2 * a);
+str = 'Корень равен ' + x1;
 }
+if (D > 0) {
+x1 = (-b + Math.sqrt(D)) / (2 * a);
+x2 = (-b - Math.sqrt(D)) / (2 * a);
+str = 'Первый корень равен ' + x1 + ', второй корень равен ' + x2;
 }
+return str;
+}
+
     </script>
